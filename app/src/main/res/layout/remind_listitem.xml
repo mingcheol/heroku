@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:minHeight="88dp">
+
+  <android.support.v4.widget.ContentLoadingProgressBar
+    android:id="@+id/remind_listitem_loading_progressbar"
+    style="@style/Widget.AppCompat.ProgressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_unit_wide"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <ImageView
+    android:id="@+id/remind_listitem_thing_icon"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_margin="@dimen/spacing_unit_normal"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <ImageButton
+    android:id="@+id/remind_listitem_detail_button"
+    style="@style/Widget.AppCompat.Button.Borderless"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_arrow_right_black_24"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/remind_listitem_thing_name"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_unit_normal"
+    android:paddingEnd="0dp"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:text="@string/msg_loading"
+    android:textColor="@color/colorOnSurfaceHighEmphasis"
+    android:textSize="16sp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@id/remind_listitem_due"
+    app:layout_constraintEnd_toStartOf="@id/remind_listitem_detail_button"
+    app:layout_constraintStart_toEndOf="@id/remind_listitem_thing_icon"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="packed"/>
+
+  <TextView
+    android:id="@+id/remind_listitem_due_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_unit_normal"
+    android:paddingEnd="@dimen/spacing_unit_narrow"
+    android:text="@string/due"
+    android:textColor="@color/colorOnSurfaceMediumEmphasis"
+    android:textSize="12sp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="@id/remind_listitem_due"
+    app:layout_constraintEnd_toStartOf="@id/remind_listitem_due"
+    app:layout_constraintStart_toEndOf="@id/remind_listitem_thing_icon"
+    app:layout_constraintTop_toTopOf="@id/remind_listitem_due"
+    app:layout_constraintVertical_chainStyle="packed"/>
+
+  <TextView
+    android:id="@+id/remind_listitem_due"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_unit_narrow"
+    android:paddingEnd="0dp"
+    android:text="@string/msg_loading"
+    android:textColor="@color/colorOnSurfaceHighEmphasis"
+    android:textSize="12sp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/remind_listitem_detail_button"
+    app:layout_constraintStart_toEndOf="@id/remind_listitem_due_label"
+    app:layout_constraintTop_toBottomOf="@id/remind_listitem_thing_name"
+    app:layout_constraintVertical_chainStyle="packed"/>
+</android.support.constraint.ConstraintLayout>

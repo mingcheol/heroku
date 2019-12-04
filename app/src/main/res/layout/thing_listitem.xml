@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/thing_listitem_height">
+
+  <ImageView
+    android:id="@+id/thing_listitem_icon"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_marginTop="@dimen/spacing_unit_normal"
+    android:layout_marginBottom="@dimen/spacing_unit_normal"
+    android:layout_marginStart="@dimen/spacing_unit_normal"
+    android:layout_marginEnd="@dimen/spacing_unit_normal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/thing_listitem_location"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_unit_wide"
+    android:paddingStart="@dimen/spacing_unit_normal"
+    android:paddingEnd="@dimen/spacing_unit_normal"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:textColor="@color/colorOnSurfaceHighEmphasis"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@id/thing_listitem_contents"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/thing_listitem_icon"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="packed"
+    tools:text="@string/msg_loading"/>
+
+  <TextView
+    android:id="@+id/thing_listitem_contents"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_unit_wide"
+    android:paddingStart="@dimen/spacing_unit_normal"
+    android:paddingEnd="@dimen/spacing_unit_normal"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:textColor="@color/colorOnSurfaceHighEmphasis"
+    android:textSize="12sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/thing_listitem_icon"
+    app:layout_constraintTop_toBottomOf="@id/thing_listitem_location"
+    app:layout_constraintVertical_chainStyle="packed"
+    tools:text="@string/msg_loading"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.signin.SignInActivity">
+
+    <ImageView
+        android:id="@+id/signin_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="75sp"
+        android:paddingTop="16dp"
+        android:src="@drawable/loginlogoimage"
+        app:layout_constraintDimensionRatio="17:10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signin_email_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:hint="@string/email"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@id/signin_password_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin_logo" />
+
+
+    <EditText
+        android:id="@+id/signin_password_edittext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:hint="@string/password"
+        android:inputType="textWebPassword"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signin_email_edittext" />
+
+    <Button
+        android:id="@+id/signin_button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:background="#FFEB3B"
+        android:text="@string/signin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_password_edittext" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/signin_google_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:textAlignment="center"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signin_button" />
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:id="@+id/signin_progressbar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintBottom_toBottomOf="@id/signin_button"
+        app:layout_constraintEnd_toEndOf="@id/signin_button"
+        app:layout_constraintStart_toStartOf="@id/signin_button"
+        app:layout_constraintTop_toTopOf="@id/signin_button" />
+
+
+    <View
+        android:id="@+id/signin_divider_0"
+        android:layout_width="120dp"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="36dp"
+        android:background="@color/colorStroke"
+        app:layout_constraintBottom_toTopOf="@id/signin_signup_button"
+        app:layout_constraintEnd_toStartOf="@id/signin_or"
+        app:layout_constraintStart_toStartOf="@id/signin_google_button"
+        app:layout_constraintTop_toBottomOf="@id/signin_google_button" />
+
+    <TextView
+        android:id="@+id/signin_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/or"
+        app:layout_constraintBottom_toTopOf="@id/signin_signup_button"
+        app:layout_constraintEnd_toStartOf="@id/signin_divider_1"
+        app:layout_constraintStart_toEndOf="@id/signin_divider_0"
+        app:layout_constraintTop_toBottomOf="@id/signin_google_button" />
+
+    <View
+        android:id="@+id/signin_divider_1"
+        android:layout_width="120dp"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="100dp"
+        android:background="@color/colorStroke"
+        app:layout_constraintBottom_toTopOf="@id/signin_signup_button"
+        app:layout_constraintEnd_toEndOf="@id/signin_google_button"
+        app:layout_constraintStart_toEndOf="@id/signin_or"
+        app:layout_constraintTop_toBottomOf="@id/signin_google_button" />
+
+    <Button
+        android:id="@+id/signin_signup_button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:background="#693E00"
+        android:text="@string/signup"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/signin_divider_1"
+        app:layout_constraintStart_toStartOf="@id/signin_divider_0"
+        app:layout_constraintTop_toBottomOf="@id/signin_or" />
+
+</android.support.constraint.ConstraintLayout>

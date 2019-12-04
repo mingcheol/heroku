@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Colors for primary -->
+  <color name="colorPrimary">#1A81E8</color>
+
+  <!-- Colors for background, surface and error -->
+  <color name="colorBackground">#EFEFEF</color>
+  <color name="colorSurface">#FFFFFF</color>
+  <color name="colorError">#951F34</color>
+  <color name="colorStroke">#242424</color>
+  <color name="colorMiddleground">#CC242424</color>
+
+  <!-- Colors for typography and iconography -->
+  <color name="colorOnPrimary">#FFFFFF</color>
+  <color name="colorOnSecondary">#000000</color>
+  <color name="colorOnBackgroundHighEmphasis">#DE000000</color>
+  <color name="colorOnBackgroundMediumEmphasis">#99000000</color>
+  <color name="colorOnBackgroundDisabled">#61000000</color>
+  <color name="colorOnSurfaceHighEmphasis">#DE000000</color>
+  <color name="colorOnSurfaceMediumEmphasis">#99000000</color>
+  <color name="colorOnSurfaceDisabled">#61000000</color>
+  <color name="colorOnError">#FFFFFF</color>
+  <color name="colorOnMiddleground">#FFFFFF</color>
+</resources>

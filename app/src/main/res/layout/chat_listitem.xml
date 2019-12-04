@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="@dimen/spacing_unit_normal"
+  android:paddingBottom="@dimen/spacing_unit_normal"
+  android:minHeight="88dp">
+
+  <android.support.v4.widget.ContentLoadingProgressBar
+    android:id="@+id/chat_listitem_loading_progressbar"
+    style="@style/Widget.AppCompat.ProgressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_unit_normal"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <com.makeramen.roundedimageview.RoundedImageView
+    android:id="@+id/chat_listitem_profile_photo"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_marginStart="@dimen/spacing_unit_normal"
+    android:layout_marginEnd="@dimen/spacing_unit_normal"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:riv_oval="true"/>
+
+  <TextView
+    android:id="@+id/chat_listitem_chatter"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_unit_normal"
+    android:paddingEnd="@dimen/spacing_unit_narrow"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:text="@string/msg_loading"
+    android:textColor="@color/colorOnSurfaceHighEmphasis"
+    android:textSize="16sp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@id/chat_listitem_message"
+    app:layout_constraintEnd_toStartOf="@id/chat_listitem_updated_at"
+    app:layout_constraintStart_toEndOf="@id/chat_listitem_profile_photo"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/chat_listitem_updated_at"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_unit_narrow"
+    android:paddingEnd="@dimen/spacing_unit_normal"
+    android:text="@string/msg_loading"
+    android:textColor="@color/colorOnSurfaceMediumEmphasis"
+    android:textSize="12sp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toTopOf="@id/chat_listitem_message"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/chat_listitem_chatter"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/chat_listitem_message"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/spacing_unit_normal"
+    android:paddingEnd="@dimen/spacing_unit_normal"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:text="@string/msg_loading"
+    android:textColor="@color/colorOnSurfaceHighEmphasis"
+    android:textSize="16sp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/chat_listitem_profile_photo"/>
+</android.support.constraint.ConstraintLayout>

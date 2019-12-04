@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:minHeight="88dp">
+
+  <ImageView
+    android:id="@+id/search_result_listitem_icon"
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_margin="@dimen/spacing_unit_normal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+    android:id="@+id/search_result_listitem_title"
+    android:textStyle="bold"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_unit_wide"
+    android:paddingStart="@dimen/spacing_unit_normal"
+    android:paddingEnd="@dimen/spacing_unit_normal"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:text="@string/msg_loading"
+    android:textColor="@color/colorPrimary"
+    android:textSize="16sp"
+    app:layout_constraintBottom_toTopOf="@id/search_result_listitem_contents"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/search_result_listitem_icon"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_chainStyle="packed"/>
+
+  <TextView
+    android:id="@+id/search_result_listitem_contents"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing_unit_wide"
+    android:paddingStart="@dimen/spacing_unit_normal"
+    android:paddingEnd="@dimen/spacing_unit_normal"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:text="@string/msg_loading"
+    android:textColor="@color/colorOnSurfaceHighEmphasis"
+    android:textSize="12sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@id/search_result_listitem_icon"
+    app:layout_constraintTop_toBottomOf="@id/search_result_listitem_title"
+    app:layout_constraintVertical_chainStyle="packed"/>
+</android.support.constraint.ConstraintLayout>

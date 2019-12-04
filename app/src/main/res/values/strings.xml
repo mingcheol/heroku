@@ -1,0 +1,76 @@
+<resources>
+  <string name="app_name">또또마켓</string>
+  <string name="TTMarket">또또마켓</string>
+  <string name="seoulthings">서울띵즈</string>
+  <string name="modify">수정</string>
+  <string name="cancel">취소</string>
+  <string name="home">홈</string>
+
+  <string name="email">이메일</string>
+  <string name="password">비밀번호</string>
+  <string name="signin">로그인</string>
+  <string name="signup">회원가입</string>
+  <string name="signout">로그아웃</string>
+  <string name="google">Google</string>
+  <string name="or">또는</string>
+
+  <string name="category">카테고리</string>
+  <string name="donation">또또마켓</string>
+  <string name="market">자유시장</string>
+  <string name="notification">알림</string>
+  <string name="profile">프로필</string>
+
+  <string name="bicycle">의류</string>
+  <string name="toy">신발</string>
+  <string name="tool">시계</string>
+  <string name="medical_device">전자기기</string>
+  <string name="power_bank">휴대폰</string>
+  <string name="suit">식품</string>
+
+  <string name="thing_contents">보유중인 물품</string>
+  <string name="thing_location">운영 정보</string>
+  <string name="thing_reviews">한 줄 후기</string>
+  <string name="contact">연락처</string>
+  <string name="web">홈페이지</string>
+  <string name="tip">주의사항</string>
+  <string name="review">한 줄 후기</string>
+  <string name="complete_review">작성완료</string>
+  <string name="due">반납일</string>
+
+  <string name="donate">판매하기</string>
+  <string name="title">제목</string>
+  <string name="contents">내용</string>
+  <string name="donation_detail">판매 상세보기</string>
+
+  <string name="chats">채팅</string>
+  <string name="modify_profile">프로필 수정</string>
+  <string name="change_profile_photo">프로필 사진 바꾸기</string>
+  <string name="profile_information">프로필 정보</string>
+  <string name="account_information">로그인 정보</string>
+  <string name="display_name">이름</string>
+  <string name="complete">완료</string>
+
+  <string name="failed_to_signin">로그인을 실패하였습니다.</string>
+  <string name="failed_to_signup">회원가입을 실패하였습니다.</string>
+  <string name="valid_display_name_input_request">올바른 닉네임을 입력해주세요.</string>
+  <string name="valid_email_input_request">올바른 이메일 주소를 입력해주세요.</string>
+  <string name="valid_password_input_request">올바른 비밀번호를 입력해주세요.</string>
+  <string name="msg_loading">불러오는 중…</string>
+  <string name="msg_search_things">대여할 물건들을 검색해보세요.</string>
+  <string name="msg_search_things_category">대여할 %s들을 검색해보세요.</string>
+  <string name="msg_search_donations">나눔들을 검색해보세요.</string>
+  <string name="msg_search_result_is_empty">검색 결과가 없습니다.</string>
+  <string name="msg_things_are_empty">대여할 수 있는 물건들이 없습니다.</string>
+  <string name="msg_make_review_suggestion">간단한 한 줄 후기를 남겨주세요.</string>
+  <string name="msg_set_address">위치 설정하기</string>
+  <string name="msg_complete_donation">판매 완료</string>
+  <string name="msg_invalid_location">위치 정보를 먼저 설정해주세요.</string>
+  <string name="msg_invalid_thoroughfare">위치 정보 알 수 없습니다.</string>
+  <string name="msg_invalid_title">제목을 입력해주세요.</string>
+  <string name="msg_invalid_contents">내용을 입력해주세요.</string>
+  <string name="msg_upload_donation_fail">해당 상품 업로드를 완료했습니다.</string>
+  <string name="msg_invalid_images">이미지를 추가해주세요.</string>
+  <string name="msg_message">메시지를 입력해주세요.</string>
+  <string name="msg_due">반납일 설정하기</string>
+  <string name="msg_complete_donation_fail">알 수 없는 이유로 나눔 완료를 실패하였습니다.</string>
+</resources>

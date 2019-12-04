@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.donation.DonationActivity">
+
+  <android.support.design.widget.AppBarLayout
+    android:id="@+id/donation_app_bar_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_app_bar"
+    app:elevation="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/app_bar_height">
+
+      <ImageButton
+        android:id="@+id/donation_back_button"
+        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/spacing_unit_normal"
+        android:paddingEnd="@dimen/spacing_unit_normal"
+        android:src="@drawable/ic_back_black_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/donation_app_bar_title"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/donation_detail"
+        android:textColor="@color/colorOnBackgroundHighEmphasis"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.v4.widget.ContentLoadingProgressBar
+    android:id="@+id/donation_detail_loading_progressbar"
+    style="@style/Widget.AppCompat.ProgressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_unit_very_wide"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/donation_app_bar_layout"/>
+
+  <ScrollView
+    android:id="@+id/donation_detail"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/donation_app_bar_layout">
+
+    <android.support.design.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.view.ViewPager
+          android:id="@+id/donation_image_pager"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          app:layout_constraintBottom_toTopOf="@id/donation_metadata_layout"
+          app:layout_constraintDimensionRatio="4:3"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <android.support.constraint.ConstraintLayout
+          android:id="@+id/donation_metadata_layout"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/spacing_unit_normal"
+          android:background="@color/colorMiddleground"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/donation_image_pager">
+
+          <TextView
+            android:id="@+id/donation_updatedat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_loading"
+            android:textColor="@color/colorOnMiddleground"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/donation_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+          <TextView
+            android:id="@+id/donation_title"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/msg_loading"
+            android:textColor="@color/colorOnMiddleground"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/donation_author"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/donation_updatedat"/>
+
+          <ImageView
+            android:id="@+id/donation_author_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_person_white_18"
+            app:layout_constraintBottom_toBottomOf="@id/donation_author"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@id/donation_author"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/donation_author"/>
+
+          <TextView
+            android:id="@+id/donation_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_loading"
+            android:textColor="@color/colorOnMiddleground"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/donation_author_icon"
+            app:layout_constraintTop_toBottomOf="@id/donation_title"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+          android:id="@+id/donation_address_button"
+          style="@style/Widget.AppCompat.Button.Borderless"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:drawableEnd="@drawable/ic_arrow_down_black_24"
+          android:text="@string/msg_set_address"
+          android:textColor="@color/colorOnSurfaceHighEmphasis"
+          android:textSize="14sp"
+          app:layout_constraintBottom_toTopOf="@id/donation_map_container"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/donation_metadata_layout"/>
+
+        <FrameLayout
+          android:id="@+id/donation_map_container"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          android:visibility="gone"
+          app:layout_constraintBottom_toTopOf="@id/donation_address_divider"
+          app:layout_constraintDimensionRatio="16:9"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/donation_address_button">
+
+          <fragment
+            android:id="@+id/donation_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        </FrameLayout>
+
+        <View
+          android:id="@+id/donation_address_divider"
+          android:layout_width="0dp"
+          android:layout_height="0.1dp"
+          android:background="@color/colorStroke"
+          app:layout_constraintBottom_toTopOf="@id/donation_contents"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/donation_map_container"/>
+
+        <TextView
+          android:id="@+id/donation_contents"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:paddingTop="@dimen/spacing_unit_normal"
+          android:paddingBottom="@dimen/spacing_unit_wide"
+          android:paddingStart="@dimen/spacing_unit_wide"
+          android:paddingEnd="@dimen/spacing_unit_wide"
+          android:text="@string/msg_loading"
+          android:textColor="@color/colorOnSurfaceHighEmphasis"
+          android:textSize="14sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/donation_address_divider"/>
+      </android.support.constraint.ConstraintLayout>
+
+      <android.support.design.widget.FloatingActionButton
+        android:id="@+id/donation_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_unit_normal"
+        android:layout_marginEnd="@dimen/spacing_unit_normal"
+        android:src="@drawable/ic_message_white_24"
+        app:layout_anchor="@id/donation_metadata_layout"
+        app:layout_anchorGravity="top|right"/>
+    </android.support.design.widget.CoordinatorLayout>
+  </ScrollView>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.chat.ChatActivity">
+
+  <android.support.design.widget.AppBarLayout
+    android:id="@+id/chat_app_bar_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_app_bar"
+    app:elevation="0dp"
+    app:layout_constraintBottom_toTopOf="@id/chat_message_recycler"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/app_bar_height">
+
+      <ImageButton
+        android:id="@+id/chat_back_button"
+        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/spacing_unit_normal"
+        android:paddingEnd="@dimen/spacing_unit_normal"
+        android:src="@drawable/ic_back_black_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/chat_app_bar_title"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/msg_loading"
+        android:textColor="@color/colorOnBackgroundHighEmphasis"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/chat_message_recycler"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@id/chat_message_divider"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/chat_app_bar_layout"/>
+
+  <View
+    android:id="@+id/chat_message_divider"
+    android:layout_width="0dp"
+    android:layout_height="0.1dp"
+    android:background="@color/colorStroke"
+    app:layout_constraintBottom_toTopOf="@id/chat_message_layout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/chat_message_recycler"/>
+
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/chat_message_layout"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/app_bar_height"
+    android:background="@color/colorBackground"
+    android:orientation="horizontal"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <EditText
+      android:id="@+id/chat_message_edittext"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="@dimen/spacing_unit_normal"
+      android:layout_marginEnd="@dimen/spacing_unit_normal"
+      android:background="@null"
+      android:hint="@string/msg_message"
+      android:maxLines="5"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/chat_send_button"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+      android:id="@+id/chat_send_button"
+      style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_send_black_24"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/chat_message_edittext"
+      app:layout_constraintTop_toTopOf="parent"/>
+  </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

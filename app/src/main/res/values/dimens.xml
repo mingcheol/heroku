@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="spacing_unit_very_narrow">4dp</dimen>
+  <dimen name="spacing_unit_narrow">8dp</dimen>
+  <dimen name="spacing_unit_normal">16dp</dimen>
+  <dimen name="spacing_unit_wide">24dp</dimen>
+  <dimen name="spacing_unit_very_wide">36dp</dimen>
+
+  <dimen name="app_bar_height">56dp</dimen>
+  <dimen name="bottom_navigation_height">56dp</dimen>
+  <dimen name="thing_listitem_height">88dp</dimen>
+  <dimen name="profile_photo">128dp</dimen>
+  <dimen name="profile_photo_thumbnail">72dp</dimen>
+</resources>

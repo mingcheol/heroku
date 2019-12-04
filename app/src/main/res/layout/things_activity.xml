@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.main.category.things.ThingsActivity">
+
+  <android.support.design.widget.AppBarLayout
+    android:id="@+id/things_app_bar_layout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_app_bar"
+    app:elevation="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.constraint.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/app_bar_height">
+
+      <ImageButton
+        android:id="@+id/things_back_button"
+        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/spacing_unit_normal"
+        android:paddingEnd="@dimen/spacing_unit_normal"
+        android:src="@drawable/ic_back_black_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/things_title"
+        android:textStyle="bold"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/colorOnBackgroundHighEmphasis"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <ImageButton
+        android:id="@+id/things_search_button"
+        style="@style/Widget.AppCompat.Toolbar.Button.Navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/spacing_unit_narrow"
+        android:paddingEnd="@dimen/spacing_unit_narrow"
+        android:src="@drawable/ic_search_black_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+  </android.support.design.widget.AppBarLayout>
+
+  <android.support.v4.widget.ContentLoadingProgressBar
+    android:id="@+id/things_progressbar"
+    style="@style/Widget.AppCompat.ProgressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_unit_very_wide"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/things_app_bar_layout"/>
+
+  <TextView
+    android:id="@+id/things_empty"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_unit_very_wide"
+    android:text="@string/msg_things_are_empty"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/things_app_bar_layout"/>
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/things_recycler"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/things_app_bar_layout"/>
+</android.support.constraint.ConstraintLayout>

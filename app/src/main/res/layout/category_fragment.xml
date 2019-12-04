@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.category.CategoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="246dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/mainLogoImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="16dp"
+                android:src="@drawable/loginlogoimage" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/category_button_bicycle"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="167dp"
+                android:layout_marginLeft="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/clothbuttonimage" />
+
+            <ImageButton
+                android:id="@+id/category_button_toy"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="167dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/shoesbuttonimage" />
+
+            <ImageButton
+                android:id="@+id/category_button_tool"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="167dp"
+                android:layout_marginRight="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/watchimage" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/category_button_medical_device"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="167dp"
+                android:layout_marginLeft="12dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/pcimage" />
+
+
+            <ImageButton
+                android:id="@+id/category_button_power_bank"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="167dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/phonebuttonimage" />
+
+            <ImageButton
+                android:id="@+id/category_button_suit"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="167dp"
+                android:layout_marginRight="6dp"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/foodbuttonimage" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
